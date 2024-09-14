@@ -1,6 +1,6 @@
 return {
 ["123fa98"] = true,
-["Krx"] = true,
+["fzdfxn"] = true,
 ["CloudScripts"] = true,
 ["wuai005"] = true,
 }
