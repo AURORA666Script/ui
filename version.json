@@ -1,0 +1,17 @@
+[
+  {
+    "name": "LSTM Archive Scripts",
+    "version": "test 1",
+    "author": "bai",
+    "language": "Lua",
+    "pronouns": "noity",
+    "discord": "https://discord.com/invite/ZUgNyZEda7",
+    "country": "Hebei"
+  },
+  {
+    "whitelist": true,
+    "blacklist": true,
+    "state": "working",
+    "key": "https://LSTMArchiveKeysystem.net/Key-system1api=Zone"
+  }
+]
