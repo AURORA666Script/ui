@@ -20,33 +20,6 @@ Back.AnchorPoint = Vector2.new(0.5, 0.5)
 Back.Parent = SG
 Instance.new("UICorner", Back).CornerRadius = UDim.new(0, 8)
 
-local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
-local Back = workspace
-local Logo = Instance.new("ImageLabel")
-Logo.Name = "Logo"
-Logo.BackgroundTransparency = 1
-Logo.Size = UDim2.new(0, 50, 0, 50)
-Logo.Position = UDim2.new(1, -70, 0, 10)
-Logo.Parent = Back
-Instance.new("UICorner", Logo).CornerRadius = UDim.new(0, 8)
-local function UpdateLogo()
-    local success, thumbnailUrl = pcall(function()
-        return LocalPlayer:GetUserHeadshotAsync(Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size352x352)
-    end)
-    if success and thumbnailUrl then
-        Logo.Image = thumbnailUrl
-    else
-        Logo.Image = "rbxasset://textures/ui/DefaultAvatar.png"
-    end
-end
-LocalPlayer.Changed:Connect(function(property)
-    if property == "UserId" then
-        UpdateLogo()
-    end
-end)
-UpdateLogo()
-
 --[[
 local X = Instance.new("TextButton")
 X.Name = "X"
