@@ -121,10 +121,10 @@ function library.new(library, name,theme)
           v:Destroy()
         end
       end
--------------------------AL------------------------------
-ALTransparency = 0.6
-ALcolor = Color3.fromRGB(37, 31, 248)
--------------------------AL------------------------------
+-------------------------LSTMArchive------------------------------
+LSTransparency = 0.6
+LScolor = Color3.fromRGB(37, 31, 248)
+-------------------------LSTMArchive------------------------------
 if theme == 'dark' then
     MainColor = Color3.fromRGB(25, 25, 25)
     Background = Color3.fromRGB(25, 25, 25)
@@ -216,7 +216,7 @@ end
       DropShadow.BackgroundTransparency = 1.000
       DropShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
       DropShadow.Size = UDim2.new(1, 10, 1, 10)
-      DropShadow.Image = "rbxassetid://17457903813" --背景
+      DropShadow.Image = "rbxassetid://110192983189954" --背景
       DropShadow.ImageColor3 = Color3.fromRGB(255,255,255)
       DropShadow.SliceCenter = Rect.new(49, 49, 450, 450)
 
@@ -427,7 +427,7 @@ end
       Open.Draggable = true
       Open.MouseButton1Click:Connect(function()
           Main.Visible = not Main.Visible
-          Open.Text=Main.Visible and "King.Script隐藏" or "King打开"
+          Open.Text=Main.Visible and "隐藏" or "打开"
       end)
 ]]
 
@@ -495,7 +495,7 @@ UIG.Parent = Open
         TabText.Size = UDim2.new(0, 76, 0, 24)
         TabText.Font = Enum.Font.GothamSemibold
         TabText.Text = name
-        TabText.TextColor3 = ALcolor
+        TabText.TextColor3 = LScolor
         TabText.TextSize = 14.000
         TabText.TextXAlignment = Enum.TextXAlignment.Left
         TabText.TextTransparency = 0.2
@@ -561,7 +561,7 @@ UIG.Parent = Open
           SectionText.Size = UDim2.new(0, 401, 0, 36)
           SectionText.Font = Enum.Font.GothamSemibold
           SectionText.Text = name
-          SectionText.TextColor3 = ALcolor
+          SectionText.TextColor3 = LScolor
           SectionText.TextSize = 16.000
           SectionText.TextXAlignment = Enum.TextXAlignment.Left
           
@@ -644,10 +644,10 @@ UIG.Parent = Open
             Btn.AutoButtonColor = false
             Btn.Font = Enum.Font.GothamSemibold
             Btn.Text = "   " .. text
-            Btn.TextColor3 = ALcolor
+            Btn.TextColor3 = LScolor
             Btn.TextSize = 16.000
             Btn.TextXAlignment = Enum.TextXAlignment.Left
-            Btn.BackgroundTransparency = ALTransparency
+            Btn.BackgroundTransparency = LSTransparency
             
             BtnC.CornerRadius = UDim.new(0, 6)
             BtnC.Name = "BtnC"
@@ -678,8 +678,8 @@ UIG.Parent = Open
           TextLabel.Size = UDim2.new(0, 428, 0, 22)
           TextLabel.Font = Enum.Font.GothamSemibold
           TextLabel.Text = text
-          TextLabel.TextColor3 = ALcolor
-          TextLabel.BackgroundTransparency = ALTransparency
+          TextLabel.TextColor3 = LScolor
+          TextLabel.BackgroundTransparency = LSTransparency
           TextLabel.TextSize = 14.000
     
           LabelC.CornerRadius = UDim.new(0, 6)
@@ -715,13 +715,13 @@ UIG.Parent = Open
             ToggleBtn.Name = "ToggleBtn"
             ToggleBtn.Parent = ToggleModule
             ToggleBtn.BackgroundColor3 = zyColor
-            ToggleBtn.BackgroundTransparency = ALTransparency
+            ToggleBtn.BackgroundTransparency = LSTransparency
             ToggleBtn.BorderSizePixel = 0
             ToggleBtn.Size = UDim2.new(0, 428, 0, 38)
             ToggleBtn.AutoButtonColor = false
             ToggleBtn.Font = Enum.Font.GothamSemibold
             ToggleBtn.Text = "   " .. text
-            ToggleBtn.TextColor3 = ALcolor
+            ToggleBtn.TextColor3 = LScolor
             ToggleBtn.TextSize = 16.000
             ToggleBtn.TextXAlignment = Enum.TextXAlignment.Left
             
@@ -828,7 +828,7 @@ UIG.Parent = Open
             KeybindBtn.AutoButtonColor = false
             KeybindBtn.Font = Enum.Font.GothamSemibold
             KeybindBtn.Text = "   " .. text
-            KeybindBtn.TextColor3 = ALcolor
+            KeybindBtn.TextColor3 = LScolor
             KeybindBtn.TextSize = 16.000
             KeybindBtn.TextXAlignment = Enum.TextXAlignment.Left
             
@@ -920,13 +920,13 @@ UIG.Parent = Open
             TextboxBack.Name = "TextboxBack"
             TextboxBack.Parent = TextboxModule
             TextboxBack.BackgroundColor3 = zyColor
-            TextboxBack.BackgroundTransparency = ALTransparency
+            TextboxBack.BackgroundTransparency = LSTransparency
             TextboxBack.BorderSizePixel = 0
             TextboxBack.Size = UDim2.new(0, 428, 0, 38)
             TextboxBack.AutoButtonColor = false
             TextboxBack.Font = Enum.Font.GothamSemibold
             TextboxBack.Text = "   " .. text
-            TextboxBack.TextColor3 = ALcolor
+            TextboxBack.TextColor3 = LScolor
             TextboxBack.TextSize = 16.000
             TextboxBack.TextXAlignment = Enum.TextXAlignment.Left
             
@@ -1021,13 +1021,13 @@ UIG.Parent = Open
             SliderBack.Name = "SliderBack"
             SliderBack.Parent = SliderModule
             SliderBack.BackgroundColor3 = zyColor
-            SliderBack.BackgroundTransparency = ALTransparency
+            SliderBack.BackgroundTransparency = LSTransparency
             SliderBack.BorderSizePixel = 0
             SliderBack.Size = UDim2.new(0, 428, 0, 38)
             SliderBack.AutoButtonColor = false
             SliderBack.Font = Enum.Font.GothamSemibold
             SliderBack.Text = "   " .. text
-            SliderBack.TextColor3 = ALcolor
+            SliderBack.TextColor3 = LScolor
             SliderBack.TextSize = 16.000
             SliderBack.TextXAlignment = Enum.TextXAlignment.Left
             
@@ -1039,7 +1039,7 @@ UIG.Parent = Open
             SliderBar.Parent = SliderBack
             SliderBar.AnchorPoint = Vector2.new(0, 0.5)
             SliderBar.BackgroundColor3 = Background
-            SliderBar.BackgroundTransparency = ALTransparency
+            SliderBar.BackgroundTransparency = LSTransparency
             SliderBar.BorderSizePixel = 0
             SliderBar.Position = UDim2.new(0.369000018, 40, 0.5, 0)
             SliderBar.Size = UDim2.new(0, 140, 0, 12)
@@ -1061,7 +1061,7 @@ UIG.Parent = Open
             SliderValBG.Name = "SliderValBG"
             SliderValBG.Parent = SliderBack
             SliderValBG.BackgroundColor3 = Background
-            SliderValBG.BackgroundTransparency = ALTransparency
+            SliderValBG.BackgroundTransparency = LSTransparency
             SliderValBG.BorderSizePixel = 0
             SliderValBG.Position = UDim2.new(0.883177578, 0, 0.131578952, 0)
             SliderValBG.Size = UDim2.new(0, 44, 0, 28)
@@ -1095,7 +1095,7 @@ UIG.Parent = Open
             MinSlider.Size = UDim2.new(0, 20, 0, 20)
             MinSlider.Font = Enum.Font.Gotham
             MinSlider.Text = "-"
-            MinSlider.TextColor3 = ALcolor
+            MinSlider.TextColor3 = LScolor
             MinSlider.TextSize = 24.000
             MinSlider.TextWrapped = true
             
@@ -1109,7 +1109,7 @@ UIG.Parent = Open
             AddSlider.Size = UDim2.new(0, 20, 0, 20)
             AddSlider.Font = Enum.Font.Gotham
             AddSlider.Text = "+"
-            AddSlider.TextColor3 = ALcolor
+            AddSlider.TextColor3 = LScolor
             AddSlider.TextSize = 24.000
             AddSlider.TextWrapped = true
             
@@ -1248,13 +1248,13 @@ UIG.Parent = Open
             DropdownTop.Name = "DropdownTop"
             DropdownTop.Parent = DropdownModule
             DropdownTop.BackgroundColor3 = zyColor
-            DropdownTop.BackgroundTransparency = ALTransparency
+            DropdownTop.BackgroundTransparency = LSTransparency
             DropdownTop.BorderSizePixel = 0
             DropdownTop.Size = UDim2.new(0, 428, 0, 38)
             DropdownTop.AutoButtonColor = false
             DropdownTop.Font = Enum.Font.GothamSemibold
             DropdownTop.Text = ""
-            DropdownTop.TextColor3 = ALcolor
+            DropdownTop.TextColor3 = LScolor
             DropdownTop.TextSize = 16.000
             DropdownTop.TextXAlignment = Enum.TextXAlignment.Left
             
@@ -1272,7 +1272,7 @@ UIG.Parent = Open
             DropdownOpen.Size = UDim2.new(0, 20, 0, 20)
             DropdownOpen.Font = Enum.Font.Gotham
             DropdownOpen.Text = "+"
-            DropdownOpen.TextColor3 = ALcolor
+            DropdownOpen.TextColor3 = LScolor
             DropdownOpen.TextSize = 24.000
             DropdownOpen.TextWrapped = true
             
@@ -1362,7 +1362,7 @@ UIG.Parent = Open
               Option.AutoButtonColor = false
               Option.Font = Enum.Font.Gotham
               Option.Text = option
-              Option.TextColor3 = ALcolor
+              Option.TextColor3 = LScolor
               Option.TextSize = 14.000
               
               OptionC.CornerRadius = UDim.new(0, 6)
