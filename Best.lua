@@ -106,7 +106,7 @@ LOADING:Destroy()
 BAR:Destroy()
 wait(1)
 MAIN:Destroy()
-wait(3)
+wait(1)
 
 local library = {}
 local ToggleUI = false
