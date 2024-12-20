@@ -97,7 +97,7 @@ UIGradient.Color = ColorSequence.new{
 }
 
 UIGradient.Rotation = 10
-UIGradient.Parent = TITLE
+UIGradient.Parent = BAR
 UIGradient.Parent = LOADING
 
 wait(1)
@@ -461,6 +461,7 @@ end
       TabBtnsL.Parent = TabBtns
       TabBtnsL.SortOrder = Enum.SortOrder.LayoutOrder
       TabBtnsL.Padding = UDim.new(0, 12)
+
       local fps = math.floor(1 / game:GetService("RunService").RenderStepped:Wait())
       ScriptTitle.Name = "ScriptTitle"
       ScriptTitle.Parent = Side
@@ -475,13 +476,10 @@ end
       ScriptTitle.TextScaled = true
       ScriptTitle.TextXAlignment = Enum.TextXAlignment.Left
 
-      local function updateFPS()
-          local currentFPS = math.floor(1 / game:GetService("RunService").RenderStepped:Wait())
-          ScriptTitle.Text = name .. " " .. currentFPS
+      while wait() do
+      ScriptTitle.Text = name .. " " .. fps
       end
-    
-      heartbeat:Connect(updateFPS)
-      
+
       UIGradientTitle.Parent = ScriptTitle
      
       local function NPLHKB_fake_script() 
