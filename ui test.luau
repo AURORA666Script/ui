@@ -461,7 +461,7 @@ end
       TabBtnsL.Parent = TabBtns
       TabBtnsL.SortOrder = Enum.SortOrder.LayoutOrder
       TabBtnsL.Padding = UDim.new(0, 12)
-
+      local fps = math.floor(1 / game:GetService("RunService").RenderStepped:Wait())
       ScriptTitle.Name = "ScriptTitle"
       ScriptTitle.Parent = Side
       ScriptTitle.BackgroundColor3 = LScolor
