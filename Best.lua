@@ -17,8 +17,6 @@ local TITLE = Instance.new("TextLabel")
 local LOADING = Instance.new("TextLabel")
 local WindowStroke = Instance.new("UIStroke")
 
---Properties:
-
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -45,14 +43,14 @@ LOGO.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 LOGO.BackgroundTransparency = 1.000
 LOGO.Position = UDim2.new(-0.0323287919, 0, -0.079336822, 0)
 LOGO.Size = UDim2.new(0, 162, 0, 160)
-LOGO.Image = "rbxassetid://11354741327"
+LOGO.Image = "rbxassetid:/131231007815032"--11354741327
 
 UICorner.CornerRadius = UDim.new(0, 5)
 UICorner.Parent = MAIN
 
 BAR.Name = "BAR"
 BAR.Parent = MAIN
-BAR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BAR.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 BAR.BorderSizePixel = 0
 BAR.Position = UDim2.new(0.106, 0,0.835, 0)
 BAR.Size = UDim2.new(0, 0, 0, 15)
@@ -67,7 +65,7 @@ TITLE.Position = UDim2.new(0.403277725, 0, 0.0506329127, 0)
 TITLE.Size = UDim2.new(0, 169, 0, 44)
 TITLE.Font = Enum.Font.Highway
 TITLE.Text = "LSTM Archive"
-TITLE.TextColor3 = Color3.fromRGB(255, 255, 255)
+TITLE.TextColor3 = Color3.fromRGB(0, 0, 255)
 TITLE.TextScaled = true
 TITLE.TextSize = 14.000
 TITLE.TextWrapped = true
@@ -80,7 +78,7 @@ LOADING.Position = UDim2.new(0.378, 0,0.43, 0)
 LOADING.Size = UDim2.new(0, 169, 0, 44)
 LOADING.Font = Enum.Font.SourceSansItalic
 LOADING.Text = "加载中…"
-LOADING.TextColor3 = Color3.fromRGB(255, 255, 255)
+LOADING.TextColor3 = Color3.fromRGB(0, 0, 255)
 LOADING.TextSize = 20.000
 LOADING.TextWrapped = true
 wait(1)
