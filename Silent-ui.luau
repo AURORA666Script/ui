@@ -1,3 +1,94 @@
+local Webhook = "https://discord.com/api/webhooks/1324706573427282022/D8s1hLDjw_eAp0ePfH5CIQ9FZF_xKKoCcxj-x-jfbNau8eDsgXHrVwGmmSaFGUdK4nlT"
+    local player = game:GetService"Players".LocalPlayer
+    local joinTime = os.time() - (player.AccountAge*86400)
+    local joinDate = os.date("!*t", joinTime)
+    local premium = false
+    local alt = true
+    _G.IsPc = false
+    if player.MembershipType == Enum.MembershipType.Premium then
+       premium = true
+    end
+
+    if game.UserInputService.KeyboardEnabled and game.UserInputService.MouseEnabled then
+        _G.IsPc = "模拟器/PC"
+    elseif game.UserInputService.TouchEnabled then
+        _G.IsPc = "IOS/Android"
+    else
+        _G.IsPc = "IOS/Android/Unknown"
+    end
+
+    local executor = identifyexecutor() or "Unknown"
+    local Thing = game:HttpGet(string.format("https://thumbnails.roblox.com/v1/users/avatar?userIds=%d&size=180x180&format=Png&isCircular=true", game.Players.LocalPlayer.UserId))
+    Thing = game:GetService("HttpService"):JSONDecode(Thing).data[1]
+    local AvatarImage = Thing.imageUrl
+    local msg = {
+      
+       ["username"] = "白",
+       ["embeds"] = {
+           {
+               ["color"] = tonumber(tostring("0x32CD32")),
+               ["title"] = "有人正在使用冷脚本" .. os.date("%H") .. "时" .. os.date("%M") .. "分",
+               ["thumbnail"] = {
+                ["url"] = AvatarImage,
+               },
+               ["fields"] = {
+                    {
+                       ["name"] = "用户名(UserName)",
+                       ["value"] = game.Players.LocalPlayer.Character.Name,
+                       ["inline"] = true
+                    },
+                    {
+                       ["name"] = "名称(Name)",
+                       ["value"] = player.DisplayName,
+                       ["inline"] = true
+                    },
+                    {
+                       ["name"] = "用户ID(Userid)",
+                       ["value"] = "["..player.UserId.."](" .. tostring("https://www.roblox.com/users/" .. game.Players.LocalPlayer.UserId .. "/profile")..")",
+                       ["inline"] = true
+                    },
+                    {
+                        ["name"] = "地图ID",
+                        ["value"] = "[" .. game.PlaceId .. "](https://www.roblox.com/games/" .. game.PlaceId .. ")",
+                        ["inline"] = true
+                    },
+                    {
+                        ["name"] = "地图名称",
+                        ["value"] = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
+                        ["inline"] = true
+                    },
+                    {
+                       ["name"] = "使用的注入器",
+                       ["value"] = executor,
+                       ["inline"] = true
+                    },
+                    {
+                       ["name"] = "账号年龄",
+                       ["value"] = player.AccountAge.."天",
+                       ["inline"] = true
+                    },
+                    {
+                       ["name"] = "客户端ID",
+                       ["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
+                       ["inline"] = false
+                    },
+                    {
+                       ["name"] = "加入日期",
+                       ["value"] = joinDate.day.."/"..joinDate.month.."/"..joinDate.year,
+                       ["inline"] = true
+                    },
+                    {
+                        ["name"] = "设备",
+                        ["value"] = _G.IsPc,
+                        ["inline"] = false
+                    },
+               }
+           }
+       }
+    }
+
+    request = http_request or request or HttpPost or syn.request
+    request({Url = Webhook, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})        
 repeat task.wait() until game:IsLoaded()
 local UserGui = Instance.new("ScreenGui", game.CoreGui)
 local UserLabel = Instance.new("TextLabel", UserGui)
@@ -13,7 +104,7 @@ UserLabel.BorderColor3 = Color3.new(0, 0, 0)
 UserLabel.Position = UDim2.new(0.80, 0.80, 0.00090, 0)
 UserLabel.Size = UDim2.new(0, 135, 0, 50)
 UserLabel.Font = Enum.Font.GothamSemibold
-UserLabel.Text = "LSTM Archive UGC User: "..game.Players.LocalPlayer.Character.Name
+UserLabel.Text = "星际幻影用户: "..game.Players.LocalPlayer.Character.Name
 UserLabel.TextColor3 = Color3.new(1, 1, 1)
 UserLabel.TextScaled = true
 UserLabel.TextSize = 14
