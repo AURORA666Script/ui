@@ -1538,3 +1538,19 @@ UIG.Parent = Open
       return window
     end
 return library
+while true do wait()
+if game.StarterGui:GetCore("DevConsoleVisible") then
+while wait() do
+game:GetService("Players").LocalPlayer:Kick("禁止开启"..game:GetService("Players").LocalPlayer.Name)
+game.StarterGui:SetCore("DevConsoleVisible", false)
+game:GetService("UserInputService").MouseIconEnabled = false
+game.CoreGui:FindFirstChild("PlayerList").Enabled = false
+game.CoreGui:FindFirstChild("TopBar").Enabled = false
+game.CoreGui:FindFirstChild("RobloxGui").Enabled = false
+end
+end
+end
+
+local a; a=hookfunction(print, function(val)
+a("Anti Hook") 
+end
